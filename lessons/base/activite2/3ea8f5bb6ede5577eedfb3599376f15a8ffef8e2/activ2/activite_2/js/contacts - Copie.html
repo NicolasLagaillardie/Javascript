@@ -1,0 +1,54 @@
+/* 
+Activité : gestion des contacts
+*/
+
+// TODO : complétez le programme
+var choix=1;
+
+var contact = {
+		init: function(nom, prenom){
+			this.nom = nom;
+			this.prenom = prenom;
+		},
+
+		decrire: function(){
+			var description = "Nom : " +this.nom+", "+" Prenom: " +this.prenom;
+			return description;
+		}
+	}
+
+while(choix!=0){
+	
+	console.log("1: lister les contacts\n2: Ajouterun contact \n3: Quitter")
+	choix = prompt("entre votre choix:");
+
+	
+
+	var contact1 = Object.create(contact);
+	contact1.init("Lévisse", "Carole");
+
+	var contact2 = Object.create(contact);
+	contact2.init("Mélodie","Nelsonne")
+
+	var contacts = [];
+	contacts.push(contact1);
+	contacts.push(contact2);
+
+	if(choix == 1){
+		contacts.forEach(function(contact){
+			console.log(contact.decrire());
+		});
+	}else if(choix == 2){
+		
+		var ajContactNom = prompt("entre le nom du nouveau contact");
+		var ajContactPrenom = prompt("entre le prénom du nouveau contact");
+
+		var contactAjouter = Object.create(contact);
+		contactAjouter.init(ajContactNom,ajContactPrenom)
+		contacts.push(contactAjouter)
+		//i++;
+		console.log("Le nouvea contact a été ajouté. ")
+		console.log(contacts)
+	}
+	
+}

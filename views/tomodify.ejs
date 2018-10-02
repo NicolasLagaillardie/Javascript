@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My todolist</title>
+        <style>
+            a {text-decoration: none; color: black;}
+        </style>
+    </head>
+
+    <body>
+        <h1>Item à modifier</h1>
+		
+        <%= tomodify[0] %>
+
+        <form action="/todo/modified/<%= tomodify[1] %>" method="post">
+            <p>
+                <label for="modified">How do you want to modify ?</label>
+                <input type="text" name="modified" id="modified" autofocus />
+                <input type="submit" />
+            </p>
+        </form>
+    </body>
+</html>

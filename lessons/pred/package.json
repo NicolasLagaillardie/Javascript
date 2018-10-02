@@ -1,0 +1,27 @@
+{
+    "name": "your-project-name",
+    "version": "0.0.1",
+    "description": "vtk.js application",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "webpack --progress --colors --mode development",
+        "build:release": "webpack --progress --colors --mode production",
+        "start": "webpack-dev-server --content-base ./dist",
+        "commit": "git cz",
+        "semantic-release": "semantic-release"
+    },
+    "keywords": [
+        "Web",
+        "visualization",
+        "using",
+        "VTK"
+    ],
+    "author": "",
+    "license": "BSD-2-Clause",
+    "dependencies": {
+        "vtk.js": "^6.7.4"
+    },
+    "devDependencies": {
+        "kw-web-suite": "^6.1.0"
+    }
+}
